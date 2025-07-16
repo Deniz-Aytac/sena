@@ -5,31 +5,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sevsevil Kitchen Menü</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="menu-container">
         <img src="images/parlaklik1.png" alt="Restoran Logo" class="menu-logo">
-        <h1 class="restaurant-title">Sevsevil Kitchen</h1>
-        <p class="restaurant-desc">Lezzetli yemekler, sıcak bir ortam. Hoş geldiniz!</p>
+        <h1 class="restaurant-title animate-fadein">Sevsevil Kitchen</h1>
+        <p class="restaurant-desc animate-fadein">Lezzetli yemekler, sıcak bir ortam. Hoş geldiniz!</p>
         <div class="menu-list">
-            <div class="menu-item">
-                <h2>Sporcu Tavugu</h2>
-                <p>Tada bakma ye geç.</p>
+            <div class="menu-item animate-pop">
+                <div class="menu-info">
+                    <h2>Sporcu Tavuğu</h2>
+                    <p>Tada bakma ye geç.</p>
+                </div>
                 <span class="price">120₺</span>
             </div>
-            <div class="menu-item">
-                <h2>Yaban Mersinli Trüflü Mayonezli Hamburger</h2>
-                <p>Lezzetten ikinci ısırığı alamayacaksınız.</p>
+            <div class="menu-item animate-pop" style="animation-delay: 0.1s;">
+                <div class="menu-info">
+                    <h2>Yaban Mersinli Trüflü Mayonezli Hamburger</h2>
+                    <p>Lezzetten ikinci ısırığı alamayacaksınız.</p>
+                </div>
                 <span class="price">180₺</span>
             </div>
-            <div class="menu-item">
-                <h2>YANMIŞ ET</h2>
-                <p>ASKIM HAYATIM GÜZELİMİN KENDİ TARİFİ.</p>
-                <span class="price">PAHA BİÇİLEMEZ₺</span>
+            <div class="menu-item animate-pop" style="animation-delay: 0.2s;">
+                <div class="menu-info">
+                    <h2>YANMIŞ ET</h2>
+                    <p>ASKIM HAYATIM GÜZELİMİN KENDİ TARİFİ.</p>
+                </div>
+                <span class="price">PAHA BİÇİLEMEZ</span>
             </div>
         </div>
+        <footer class="footer">
+            <p>© 2024 Sevsevil Kitchen | Tüm hakları saklıdır.</p>
+        </footer>
     </div>
 </body>
 

@@ -1,9 +1,10 @@
 body {
-    background: linear-gradient(120deg, #f0f4f8, #c9e7ff);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(120deg, #f0f4f8, #a1c4fd 80%);
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     min-height: 100vh;
+    color: #222;
 }
 
 .container {
@@ -28,80 +29,171 @@ p {
 
 /* Menü sayfası için ek stiller */
 .menu-container {
-    max-width: 700px;
-    margin: 60px auto;
+    max-width: 800px;
+    margin: 48px auto 24px auto;
     background: #fff;
-    border-radius: 20px;
-    box-shadow: 0 6px 32px rgba(0, 0, 0, 0.10);
+    border-radius: 28px;
+    box-shadow: 0 8px 40px rgba(0, 119, 204, 0.10), 0 1.5px 8px rgba(0, 0, 0, 0.04);
     padding: 48px 32px 32px 32px;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+    animation: fadein 1s;
 }
 
 .menu-logo {
-    width: 120px;
-    height: 120px;
-    object-fit: contain;
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
     border-radius: 50%;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    margin-bottom: 18px;
+    box-shadow: 0 2px 16px rgba(0, 119, 204, 0.10);
     background: #f8f8f8;
+    border: 4px solid #a1c4fd;
+    transition: transform 0.3s;
+}
+
+.menu-logo:hover {
+    transform: scale(1.07) rotate(-3deg);
 }
 
 .restaurant-title {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     color: #0077cc;
-    margin-bottom: 8px;
-    letter-spacing: 1px;
+    margin-bottom: 10px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
 }
 
 .restaurant-desc {
-    color: #666;
-    font-size: 1.2rem;
-    margin-bottom: 32px;
+    color: #555;
+    font-size: 1.25rem;
+    margin-bottom: 36px;
+    font-weight: 400;
 }
 
 .menu-list {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 28px;
+    margin-bottom: 32px;
 }
 
 .menu-item {
-    background: #f6fbff;
-    border-radius: 14px;
-    box-shadow: 0 2px 8px rgba(0, 119, 204, 0.06);
-    padding: 24px 20px;
+    background: linear-gradient(90deg, #e3f0ff 60%, #f8fbff 100%);
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(0, 119, 204, 0.07);
+    padding: 28px 24px;
     text-align: left;
-    transition: transform 0.15s;
+    transition: transform 0.18s, box-shadow 0.18s;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+    border-left: 6px solid #0077cc;
+    cursor: pointer;
 }
 
 .menu-item:hover {
-    transform: translateY(-4px) scale(1.02);
-    box-shadow: 0 6px 24px rgba(0, 119, 204, 0.10);
+    transform: translateY(-6px) scale(1.025);
+    box-shadow: 0 8px 32px rgba(0, 119, 204, 0.13);
+    border-left: 6px solid #00c6fb;
 }
 
-.menu-item h2 {
+.menu-info h2 {
     margin: 0 0 8px 0;
     color: #0077cc;
-    font-size: 1.4rem;
+    font-size: 1.35rem;
+    font-weight: 600;
 }
 
-.menu-item p {
-    margin: 0 0 10px 0;
+.menu-info p {
+    margin: 0 0 6px 0;
     color: #444;
     font-size: 1.05rem;
+    font-weight: 400;
 }
 
 .price {
     display: inline-block;
-    background: #0077cc;
+    background: linear-gradient(90deg, #0077cc 60%, #00c6fb 100%);
     color: #fff;
-    padding: 6px 18px;
-    border-radius: 20px;
+    padding: 8px 22px;
+    border-radius: 22px;
     font-weight: bold;
-    font-size: 1.1rem;
-    margin-left: 24px;
+    font-size: 1.13rem;
+    margin-left: 32px;
+    box-shadow: 0 2px 8px rgba(0, 119, 204, 0.10);
+    letter-spacing: 1px;
+    border: none;
+}
+
+.footer {
+    margin-top: 32px;
+    color: #888;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    border-top: 1px solid #e3e3e3;
+    padding-top: 18px;
+    opacity: 0.85;
+}
+
+/* Animasyonlar */
+@keyframes fadein {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fadein {
+    animation: fadein 1.2s cubic-bezier(.4, 0, .2, 1);
+}
+
+@keyframes pop {
+    0% {
+        opacity: 0;
+        transform: scale(0.95) translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.animate-pop {
+    animation: pop 0.7s cubic-bezier(.4, 0, .2, 1);
+}
+
+/* Responsive Tasarım */
+@media (max-width: 700px) {
+    .menu-container {
+        padding: 24px 6px 18px 6px;
+        border-radius: 16px;
+    }
+
+    .menu-list {
+        gap: 18px;
+    }
+
+    .menu-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 18px 12px;
+    }
+
+    .price {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .restaurant-title {
+        font-size: 2rem;
+    }
 }
