@@ -258,6 +258,46 @@ body {
     filter: grayscale(0.2) brightness(0.9);
 }
 
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 18px;
+    padding: 18px 0 0 18px;
+    background: transparent;
+    position: relative;
+    z-index: 1002;
+}
+
+.eko-badge {
+    position: static;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 2px 12px rgba(0, 147, 209, 0.13);
+    background: #fff;
+    border: 2.5px solid #0093d1;
+    transition: transform 0.18s;
+}
+
+.main-logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 2px 12px rgba(0, 147, 209, 0.10);
+    background: #fff;
+    border: 2.5px solid #ff8800;
+    margin-left: 0;
+    transition: transform 0.18s;
+}
+
+.eko-badge:hover,
+.main-logo:hover {
+    transform: scale(1.08) rotate(-4deg);
+}
+
 @keyframes fadein {
     from {
         opacity: 0;
@@ -329,5 +369,20 @@ body {
     .footer-social img {
         width: 20px;
         height: 20px;
+    }
+
+    .top-bar {
+        gap: 8px;
+        padding: 8px 0 0 8px;
+    }
+
+    .eko-badge {
+        width: 36px;
+        height: 36px;
+    }
+
+    .main-logo {
+        width: 48px;
+        height: 48px;
     }
 }
