@@ -8,6 +8,8 @@ body {
     overflow-x: hidden;
 }
 
+/* Tüm sayfanın ana arka planı ve font ayarları */
+
 .ocean-bg {
     position: fixed;
     top: 0;
@@ -20,6 +22,8 @@ body {
     pointer-events: none;
 }
 
+/* Sayfanın arka planındaki gradient renk efekti */
+
 .main-wrapper {
     position: relative;
     z-index: 1;
@@ -27,6 +31,8 @@ body {
     margin: 0 auto;
     padding: 32px 16px 0 16px;
 }
+
+/* Ana içerik alanının genişliği ve hizalaması */
 
 .header {
     display: flex;
@@ -37,24 +43,13 @@ body {
     gap: 14px;
 }
 
-.logo {
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 0 6px 32px rgba(0, 147, 209, 0.13);
-    border: 5px solid #fffbe6;
-    background: #fff8f0;
-    transition: transform 0.3s;
-}
-
-.logo:hover {
-    transform: scale(1.08) rotate(-4deg);
-}
+/* Başlık bölümünün dikey hizalaması */
 
 .header-text {
     text-align: center;
 }
+
+/* Başlık metinlerinin ortalanması */
 
 .big-title {
     font-size: 2.7rem;
@@ -66,6 +61,8 @@ body {
     animation: fadein 1.2s cubic-bezier(.4, 0, .2, 1);
 }
 
+/* Ana başlık "Sevsevil Kitchen" yazısının stili */
+
 .subtitle {
     font-size: 1.2rem;
     color: #ff8800;
@@ -75,10 +72,14 @@ body {
     animation: fadein 1.5s cubic-bezier(.4, 0, .2, 1);
 }
 
+/* Alt başlık açıklama metninin stili */
+
 .menu-section {
     margin-top: 12px;
     margin-bottom: 48px;
 }
+
+/* Menü bölümünün üst-alt boşlukları */
 
 .menu-category {
     background: #fff;
@@ -90,11 +91,15 @@ body {
     animation: pop 0.8s cubic-bezier(.4, 0, .2, 1);
 }
 
+/* Her menü kategorisinin (Çorbalar, Ana Yemekler vb.) kutusu */
+
 .menu-category.special {
     background: linear-gradient(90deg, #0093d1 60%, #ff8800 100%);
     color: #fff;
     box-shadow: 0 8px 32px rgba(0, 147, 209, 0.13);
 }
+
+/* "Günün Menüsü" kategorisinin özel gradient arka planı */
 
 .menu-category .category-icon {
     font-size: 2.1rem;
@@ -106,10 +111,14 @@ body {
     background-clip: text;
 }
 
+/* Kategori başlıklarındaki emoji ikonlarının gradient rengi */
+
 .menu-category.special .category-icon {
     -webkit-text-fill-color: #fff;
     background: none;
 }
+
+/* Özel kategorideki ikonun beyaz rengi */
 
 .category-title {
     font-size: 1.5rem;
@@ -124,6 +133,8 @@ body {
     background-clip: text;
 }
 
+/* Kategori başlıklarının (Çorbalar, Ana Yemekler vb.) gradient yazı rengi */
+
 .menu-category.special .category-title {
     color: #fff;
     -webkit-text-fill-color: #fff;
@@ -131,11 +142,15 @@ body {
     text-shadow: 0 2px 8px rgba(0, 147, 209, 0.13);
 }
 
+/* Özel kategorideki başlığın beyaz rengi */
+
 .menu-items {
     display: flex;
     flex-direction: column;
     gap: 18px;
 }
+
+/* Menü öğelerinin dikey listesi */
 
 .menu-item {
     display: flex;
@@ -150,16 +165,22 @@ body {
     gap: 18px;
 }
 
+/* Her yemek kartının (Tavuk Pilav, Mercimek Çorbası vb.) kutusu */
+
 .menu-category.special .menu-item {
     background: rgba(255, 255, 255, 0.13);
     color: #fff;
     box-shadow: 0 2px 12px rgba(255, 255, 255, 0.10);
 }
 
+/* Özel kategorideki yemek kartlarının şeffaf arka planı */
+
 .menu-item:hover {
     transform: scale(1.04) translateY(-4px);
     box-shadow: 0 8px 32px rgba(0, 147, 209, 0.13);
 }
+
+/* Yemek kartlarının hover efektleri */
 
 .menu-item h3 {
     font-size: 1.15rem;
@@ -168,9 +189,13 @@ body {
     margin: 0 0 4px 0;
 }
 
+/* Yemek isimlerinin (Tavuk Pilav, Mercimek Çorbası vb.) yazı stili */
+
 .menu-category.special .menu-item h3 {
     color: #fffbe6;
 }
+
+/* Özel kategorideki yemek isimlerinin beyaz rengi */
 
 .menu-item p {
     color: #ff8800;
@@ -179,9 +204,13 @@ body {
     font-weight: 500;
 }
 
+/* Yemek açıklamalarının (Beğenmeyen YEMEZ vb.) yazı stili */
+
 .menu-category.special .menu-item p {
     color: #fffbe6;
 }
+
+/* Özel kategorideki açıklamaların beyaz rengi */
 
 .food-thumb {
     width: 48px;
@@ -195,10 +224,14 @@ body {
     transition: transform 0.18s, border-color 0.18s;
 }
 
+/* Yemeklerin yanındaki küçük görsellerin (🥘, 🍲 vb.) boyutu ve stili */
+
 .menu-item:hover .food-thumb {
     transform: scale(1.08) rotate(-3deg);
     border-color: #ff8800;
 }
+
+/* Yemek görsellerinin hover efektleri */
 
 .price {
     display: inline-block;
@@ -215,15 +248,21 @@ body {
     transition: box-shadow 0.18s, background 0.18s;
 }
 
+/* Fiyat etiketlerinin (120₺, 60₺ vb.) gradient arka planı ve stili */
+
 .menu-item:hover .price {
     box-shadow: 0 4px 16px rgba(0, 147, 209, 0.18);
     background: linear-gradient(90deg, #0093d1 60%, #ff8800 100%);
 }
 
+/* Fiyat etiketlerinin hover efektleri */
+
 .menu-category.special .price {
     background: #fffbe6;
     color: #0093d1;
 }
+
+/* Özel kategorideki fiyat etiketlerinin beyaz arka planı */
 
 .footer {
     margin-top: 32px;
@@ -236,9 +275,13 @@ body {
     text-align: center;
 }
 
+/* Alt kısımdaki footer metninin stili */
+
 .footer-social {
     margin-bottom: 8px;
 }
+
+/* Sosyal medya ikonlarının alt boşluğu */
 
 .footer-social a {
     display: inline-block;
@@ -247,16 +290,22 @@ body {
     transition: opacity 0.18s, transform 0.18s;
 }
 
+/* Sosyal medya linklerinin (Instagram, Facebook vb.) hover efektleri */
+
 .footer-social a:hover {
     opacity: 1;
     transform: scale(1.15);
 }
+
+/* Sosyal medya ikonlarının hover büyüme efekti */
 
 .footer-social img {
     width: 28px;
     height: 28px;
     filter: grayscale(0.2) brightness(0.9);
 }
+
+/* Sosyal medya ikonlarının boyutu ve renk filtresi */
 
 .top-bar {
     display: flex;
@@ -268,6 +317,8 @@ body {
     position: relative;
     z-index: 1002;
 }
+
+/* En üstteki logo barının yatay hizalaması */
 
 .eko-badge {
     position: static;
@@ -281,6 +332,8 @@ body {
     transition: transform 0.18s;
 }
 
+/* Sol üstteki eko.png rozetinin boyutu ve stili */
+
 .main-logo {
     width: 80px;
     height: 80px;
@@ -293,10 +346,14 @@ body {
     transition: transform 0.18s;
 }
 
+/* Ana AAA.png logosunun boyutu ve stili */
+
 .eko-badge:hover,
 .main-logo:hover {
     transform: scale(1.08) rotate(-4deg);
 }
+
+/* Logo hover efektleri */
 
 @keyframes fadein {
     from {
@@ -310,6 +367,8 @@ body {
     }
 }
 
+/* Sayfa yüklenirken başlıkların yukarıdan aşağıya kayma animasyonu */
+
 @keyframes pop {
     0% {
         opacity: 0;
@@ -322,67 +381,77 @@ body {
     }
 }
 
+/* Menü kategorilerinin büyüyerek görünme animasyonu */
+
 @media (max-width: 800px) {
     .main-wrapper {
         padding: 8px 2px 0 2px;
     }
 
+    /* Mobilde ana içerik alanının kenar boşlukları */
     .header {
         margin-bottom: 18px;
         margin-top: 6px;
     }
 
-    .logo {
-        width: 70px;
-        height: 70px;
+    /* Mobilde başlık bölümünün boşlukları */
+    .top-bar {
+        gap: 8px;
+        padding: 8px 0 0 8px;
     }
 
+    /* Mobilde üst logo barının boşlukları */
+    .eko-badge {
+        width: 36px;
+        height: 36px;
+    }
+
+    /* Mobilde eko rozetinin küçük boyutu */
+    .main-logo {
+        width: 48px;
+        height: 48px;
+    }
+
+    /* Mobilde ana logonun küçük boyutu */
     .big-title {
         font-size: 1.3rem;
     }
 
+    /* Mobilde ana başlığın küçük yazı boyutu */
     .category-title {
         font-size: 1.1rem;
     }
 
+    /* Mobilde kategori başlıklarının küçük yazı boyutu */
     .menu-category {
         padding: 12px 6px 8px 6px;
     }
 
+    /* Mobilde menü kategorilerinin küçük iç boşlukları */
     .menu-item {
         padding: 10px 6px 8px 6px;
         gap: 8px;
     }
 
+    /* Mobilde yemek kartlarının küçük iç boşlukları */
     .food-thumb {
         width: 32px;
         height: 32px;
         margin-right: 6px;
     }
 
+    /* Mobilde yemek görsellerinin küçük boyutu */
     .price {
         margin-left: 4px;
         padding: 5px 10px;
         font-size: 0.95rem;
     }
 
+    /* Mobilde fiyat etiketlerinin küçük boyutu */
     .footer-social img {
         width: 20px;
         height: 20px;
     }
 
-    .top-bar {
-        gap: 8px;
-        padding: 8px 0 0 8px;
-    }
-
-    .eko-badge {
-        width: 36px;
-        height: 36px;
-    }
-
-    .main-logo {
-        width: 48px;
-        height: 48px;
-    }
+    /* Mobilde sosyal medya ikonlarının küçük boyutu */
 }
